@@ -2,7 +2,7 @@ export interface IItemGridProps {
     data: IItem[];
     props: any;
 }
-interface IItem {
+export interface IItem {
     image: string;
     title: string;
     description: string;

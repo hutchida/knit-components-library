@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container } from './styles';
-import { IItemGridProps } from './types';
+import { Container, Tile } from './styles';
+import { IItemGridProps, IItem } from './types';
 
 export const ItemGrid = ({
     data,
@@ -8,6 +8,11 @@ export const ItemGrid = ({
 }: IItemGridProps) => {
     console.log('props', props)
     return (
-        <Container>{props}</Container>
+        <>
+            <Container>{props}</Container>
+            {data?.map((item: IItem, index: number) =>
+                <Tile>{item.title}</Tile>)
+            }
+        </>
     )
 }
