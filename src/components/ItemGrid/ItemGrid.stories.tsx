@@ -3,7 +3,7 @@ import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import { ItemGrid } from "./index";
 import { IItemGridProps } from "./types";
-
+import { data as itemData } from "./data"
 export default {
     title: "Components/ItemGrid",
     component: ItemGrid,
@@ -14,7 +14,7 @@ const Template: Story<IItemGridProps> = (args) => <ItemGrid {...args} />;
 
 // Reuse that template for creating different stories
 export const Primary = Template.bind({});
-Primary.args = { props: "Primary 😃" };
+Primary.args = { props: "Primary 😃", data: itemData, };
 
 // export const Secondary = Template.bind({});
 // Secondary.args = { ...Primary.args, primary: false, label: "Secondary 😇" };
