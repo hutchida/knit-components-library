@@ -11,10 +11,12 @@ export const ItemGrid = ({
         <>
             <Container>
                 {data?.map((item: IItem, index: number) =>
-                    <Tile
-                        $width={props.width || 200}
-                        $height={props.height || 200}
-                        $imageUrl={item.image}>{`${index + 1} - ${item.title}`}</Tile>)
+                    <a href={`https://${item?.url}`} target={props?.target || '_blank'}>
+                        <Tile
+                            $width={props.width || 200}
+                            $height={props.height || 200}
+                            $imageUrl={item.image}><p>{`${index + 1} - ${item.title}`}</p></Tile>
+                    </a>)
                 }
             </Container>
         </>

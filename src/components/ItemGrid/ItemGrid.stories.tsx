@@ -14,7 +14,7 @@ const Template: Story<IItemGridProps> = (args) => <ItemGrid {...args} />;
 
 // Reuse that template for creating different stories
 export const Primary = Template.bind({});
-Primary.args = { props: "Primary 😃", data: itemData, };
+Primary.args = { props: { width: 250, height: 250 }, data: itemData, };
 
 // export const Secondary = Template.bind({});
 // Secondary.args = { ...Primary.args, primary: false, label: "Secondary 😇" };
