@@ -40,6 +40,7 @@
     "build": "rollup -c"
   },
   "dependencies": {
+    "styled-components": "^5.3.3",
     "tailwind-styled-components": "^2.1.4"
   }
 }

@@ -14,5 +14,5 @@ w-full
 h-1/3
 text-center
 bg-gradient-to-r from-cyan-500 to-blue-500
-${(p) =>`bg-[url('${p.$imageUrl}')]`}
+${(p: { $imageUrl: string; }) =>`bg-[url('${p.$imageUrl}')]`}
 `
