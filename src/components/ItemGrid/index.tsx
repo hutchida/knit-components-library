@@ -11,7 +11,10 @@ export const ItemGrid = ({
         <>
             <Container>
                 {data?.map((item: IItem, index: number) =>
-                    <Tile $imageUrl={item.image}>{item.title}</Tile>)
+                    <Tile
+                        $width={props.width || 200}
+                        $height={props.height || 200}
+                        $imageUrl={item.image}>{`${index + 1} - ${item.title}`}</Tile>)
                 }
             </Container>
         </>

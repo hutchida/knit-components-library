@@ -8,11 +8,10 @@ export const Container = tw.div`
     border
     flex
 `
-export const Tile = styled.div<{ $imageUrl?: string }>`
-border
-w-full
-h-1/3
-text-center
-bg-gradient-to-r from-cyan-500 to-blue-500
-${(p: { $imageUrl: string; }) =>`bg-[url('${p.$imageUrl}')]`}
+export const Tile = styled.div<{ $imageUrl?: string,  $width?: number,  $height?: number }>`
+border: red solid 1px;
+text-align: center;
+${(p) =>`width: ${p.$width}px;`}
+${(p) =>`height: ${p.$height}px;`}
+${(p) =>`background-image: url("${p.$imageUrl}");`}
 `
