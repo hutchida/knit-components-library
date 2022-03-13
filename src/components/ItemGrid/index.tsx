@@ -9,10 +9,11 @@ export const ItemGrid = ({
     console.log('props', props)
     return (
         <>
-            <Container>{props}</Container>
-            {data?.map((item: IItem, index: number) =>
-                <Tile>{item.title}</Tile>)
-            }
+            <Container>
+                {data?.map((item: IItem, index: number) =>
+                    <Tile $imageUrl={item.image}>{item.title}</Tile>)
+                }
+            </Container>
         </>
     )
 }
