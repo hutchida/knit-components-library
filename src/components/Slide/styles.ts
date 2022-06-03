@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
+export const Container = styled.section<{
+  $spacing?:number
+}>`
   display: flex;
   justify-content: center;
   width: 100%;
+  padding: 2rem;
+  ${(p)=> `padding: ${p.$spacing}rem 0`}
 `
 export const SlideItem = styled.div<{ 
   $imageUrl?: string,  
