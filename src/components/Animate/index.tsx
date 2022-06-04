@@ -9,6 +9,7 @@ import { useState, useRef, useEffect } from "react";
  * @returns 
  */
 export const Animate = (
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   { slideUp, time = '700ms', children }:
     IAnimate) => {
   const [isVisible, setVisible] = useState(false);
@@ -27,7 +28,6 @@ export const Animate = (
     return;
   }, [isVisible]);
 
-  console.log('isVisible', isVisible);
   return (
     <Container
       $isVisible={isVisible}
