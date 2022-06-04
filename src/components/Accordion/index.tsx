@@ -29,7 +29,7 @@ const AccordionItem = ({ data, onToggle, isActive }: any) => {
 export const Accordion = ({ props, data }: IAccordion) => {
     const [clicked, setClicked] = useState(0);
 
-    const handleToggle = (index) => {
+    const handleToggle = (index: number) => {
         if (clicked === index) {
             return setClicked(0);
         }
