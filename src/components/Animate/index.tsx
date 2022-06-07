@@ -1,6 +1,7 @@
 import { IAnimate } from "./types";
 import { Container } from './styles';
 import { useState, useRef, useEffect } from "react";
+import React from "react";
 /**
  * 
  * @param slideUp - boolean to tell component to invoke the slideUp class

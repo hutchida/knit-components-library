@@ -13,6 +13,6 @@ export const Container = styled.section<{
 export const Skewed = styled.div<{
   $tilt?:number
 }>`
-  padding: 5rem;
+  padding: 3vh;
   ${(p)=> `transform: skewY(-${p.$tilt}deg);`}
 `

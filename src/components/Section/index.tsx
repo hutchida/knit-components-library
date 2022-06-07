@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container, Skewed } from './styles';
 /**
  * Simple section component that can create a diagonal coloured background effect

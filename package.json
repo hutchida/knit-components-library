@@ -1,6 +1,6 @@
 {
   "name": "knit-hutchida",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
@@ -13,12 +13,11 @@
     "@babel/preset-env": "^7.16.11",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.1.1",
-    "@storybook/addon-actions": "^6.4.9",
-    "@storybook/addon-essentials": "^6.4.9",
-    "@storybook/addon-links": "^6.4.9",
+    "@storybook/addon-actions": "^6.4.17",
+    "@storybook/addon-essentials": "^6.4.17",
+    "@storybook/addon-links": "^6.4.17",
     "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/react": "^6.4.9",
-    "@testing-library/react": "^11.2.5",
+    "@storybook/react": "^6.4.17",
     "@types/jest": "^27.4.1",
     "@types/react": "^17.0.38",
     "@types/styled-components": "^5.1.24",
@@ -41,9 +40,9 @@
     "jest": "^27.5.1",
     "postcss": "^8.4.8",
     "prettier": "^2.6.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-test-renderer": "^17.0.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-test-renderer": "^18.1.0",
     "rollup": "^2.62.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
@@ -53,8 +52,8 @@
     "typescript": "^4.6.3"
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
@@ -67,8 +66,8 @@
     "babel": "^6.23.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
-    "styled-components": "^5.3.3",
-    "tailwind-styled-components": "^2.1.4"
+    "styled-components": "^5.3.5",
+    "tailwind-styled-components": "^2.1.7"
   },
   "lint-staged": {
     "**/*.{ts,tsx,js}": [
