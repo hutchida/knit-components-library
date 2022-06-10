@@ -1,0 +1,77 @@
+{
+  "name": "Daniel Hutchings",
+  "address": "Tempelherrenstr. 15, 10961, Germany",
+  "email": "danielmhutchings@gmail.com",
+  "website": "www.hutchida.com",
+  "oneLiner": "Frontend Developer, DIY fundamentalist, dreams in JSON...",
+  "experience": [
+    {
+      "company": "AKQA",
+      "industry": "Agency",
+      "role": "Web Developer",
+      "location": "Berlin, Germany",
+      "from": "2021",
+      "to": "now",
+      "highlights": [
+        "Key React developer on global enterprise websites (Jaegermeister, Dr. Oetker)",
+        "Configured graphql based CMS with UIs for multiple markets and languages",
+        "Developed custom apis to query NFT data held on distributed IPFS",
+        "Improved code review process with templates and best practice",
+        "Streamlined tech recruitment with more efficient code challenge"
+      ]
+    },
+    {
+      "company": "Lexis Nexis",
+      "industry": "Publishing",
+      "role": "Automation Developer",
+      "location": "London (Remote)",
+      "from": "2014",
+      "to": "2021",
+      "highlights": [
+        "Produced VueJS dashboards to show the health of content sets (e.g. currency, broken links)",
+        "Used Python data analysis tools to pull key stats and plot behavioural change",
+        "Built a Chrome/IE plugin in vanilla Javascript to serve relevant LexisNexis search results based on what the user was currently looking at"
+      ]
+    },
+    {
+      "company": "Lexis Nexis",
+      "industry": "Publishing",
+      "role": "Content Analyst",
+      "location": "London, UK",
+      "from": "2008",
+      "to": "2014",
+      "highlights": [
+        "Used Python, Perl, VB and XSLT to convert multiple sources to bespoke XML",
+        "Created and negotiated SLAs and SOWs with offshore suppliers"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "London Metropolitan University",
+      "course": "BSc in Multimedia Computing",
+      "accreditation": "Upper Second Class Honours",
+      "location": "London, UK",
+      "from": "2000",
+      "to": "2003",
+      "highlights": [
+        "JavaScript, JSP, Java, C+, CSS, HTML, Director, Flash"
+      ]
+    },
+    {
+      "school": "SAE",
+      "course": "Audio Engineering",
+      "accreditation": "Diploma",
+      "location": "Sydney, Australia",
+      "from": "2000",
+      "to": "2003",
+      "highlights": [
+        "Digital and analog tape editing & recording, music theory, graphic and web design"
+      ]
+    }
+  ],
+  "interests": [
+    "I love DIY, especially woodworking, and over the last few years have been restoring a ruin of a house on the side of an old volcano in Lanzarote.",
+    "I'm always training for the next marathon. So far I have Barcelona 2017 and Sevilla 2020 under my belt."
+  ]
+}
