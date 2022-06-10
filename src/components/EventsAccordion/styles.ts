@@ -41,6 +41,7 @@ export const ItemContainer = styled.li<{$isActive?:Boolean}>`
   hr {
     border-bottom: dotted;
   }
+  overflow: hidden;
   max-width: 1200px;
   list-style: none;
   border-radius: 1rem;
@@ -57,8 +58,6 @@ export const ItemControl = styled.span`
 `;
 
 export const ItemTitle = styled.button<{$isActive?:Boolean}>`
-  z-index: -1;
-  position: relative;
   color: #363538;
   text-align: left;
   font-weight: 200;
@@ -105,5 +104,9 @@ export const Where = styled.div`
   font-size: 2vw;
 `;
 
-export const Divider = styled.hr`
+export const Divider = styled.hr<{$isActive?:Boolean}>`
+  ${(p) => 
+    p.$isActive ? `
+    border-bottom: none !important;
+    ` : ``}
 `;
