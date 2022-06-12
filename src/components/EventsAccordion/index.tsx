@@ -29,10 +29,8 @@ const EventsAccordionItem = ({ item, onToggle, isActive, position, total }: any)
                 </EventInfo>
             </ItemTitle>
             <Highlights $isActive={isActive}>
-                {item?.highlights?.map((highlight, index) =>
-                    <>
-                        <Highlight $isActive={isActive} key={`events-accordion-item-${index}`}>{highlight}</Highlight>
-                    </>
+                {item?.highlights?.map((highlight: string, index: number) =>
+                    <Highlight $isActive={isActive} key={`events-accordion-item-${index}`}>{highlight}</Highlight>
                 )}
             </Highlights>
             {(position < total) && < Divider $isActive={isActive} />}
