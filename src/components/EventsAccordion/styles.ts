@@ -13,7 +13,7 @@ export const Highlights = styled.div<{$isActive?:Boolean}>`
   list-style: none;
   display: flex;
   flex-flow: column;  
-  font-size: 4vw;
+  font-size: 3vw;
   align-items: center;
   justify-content: space-between;
   overflow-y: hidden;
@@ -21,8 +21,7 @@ export const Highlights = styled.div<{$isActive?:Boolean}>`
   ${(p) => 
     p.$isActive ? `
     height: auto;
-    padding: 2vw 0;` : `
-    border-`
+    padding: 2vw 0;` : ``
   }
 `;
 
@@ -49,8 +48,6 @@ export const ItemContainer = styled.li<{$isActive?:Boolean}>`
     p.$isActive ? `
     border: lightblue solid 5px;
     ` : ``}
-
-  
 `;
 
 export const ItemControl = styled.span`
@@ -66,7 +63,7 @@ export const ItemTitle = styled.button<{$isActive?:Boolean}>`
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 8px;
+  padding: 18px 18px;
   cursor: pointer;
   border: none;
   background-color: #e8e8e8;
@@ -81,7 +78,7 @@ export const EventInfo = styled.div`
   justify-content: space-between;    
   align-items: end;
   padding: 2vw 5% 2vw 0;
-  font-size: 3vw;
+  font-size: 2vw;
   width: 95%;
 `;
 
@@ -92,16 +89,22 @@ export const FromTo = styled.div<{$isActive?:Boolean}>`
     border-bottom: dotted;
     ` : ``}
 `;
+
 export const Company = styled.div`
+  width: 20%;
   span {
     font-size: 1vw;
   }
 `;
+
 export const Role = styled.div`
-  font-size: 2vw;
+  width: 20%;
+  font-size: 1.5vw;
 `;
+
 export const Where = styled.div`
-  font-size: 2vw;
+  width: 20%;
+  font-size: 1.5vw;
 `;
 
 export const Divider = styled.hr<{$isActive?:Boolean}>`
