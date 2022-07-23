@@ -17,7 +17,7 @@ export const Slide = ({
     return (
         <Container $spacing={spacingMap[spacing]}>
             <SlideItem
-                $imageUrl={bgImage}
+                $imageUrl={bgImage?.filename}
                 $color={bgColor}
                 $slideWidth={slideSizeMap[slideWidth]}
                 $slideHeight={slideSizeMap[slideHeight]}>

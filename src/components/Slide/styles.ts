@@ -19,6 +19,8 @@ export const SlideItem = styled.div<{
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 1rem;
+  background-size: cover;
   ${(p) =>`width: ${p.$slideWidth || 800}px;`}
   ${(p) =>`height: ${p.$slideHeight || 800}px;`}
   text-align: center;
