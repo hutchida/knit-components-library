@@ -6,9 +6,9 @@ import {
     Subtitle,
     Title,
     Oneliner,
-    Socials,
 } from './styles';
 import { Link } from '../Link';
+import { Socials } from '../Socials';
 import { ISplash } from './types';
 /**
  * Splash intro hero section component 
@@ -25,14 +25,16 @@ export const Splash = ({
 }: ISplash) => {
     return (
         <Container $bgColor={bgColor} $bgImage={bgImage}>
-            <ProfilePic $profilePic={profilePic} />
+            <ProfilePic>
+                <img src={profilePic} />
+            </ProfilePic>
             <Info>
                 {subtitle && <Subtitle>{subtitle}</Subtitle>}
                 {title && <Title>{title}</Title>}
                 {oneliner && <Oneliner>{oneliner}</Oneliner>}
-                {socials && <Socials $socials={socials}></Socials>}
+                {socials && <Socials socials={socials} />}
             </Info>
-            {onwardLink && <Link link={onwardLink} />}
+            {onwardLink && <Link {...onwardLink} />}
         </Container>
     );
 };
