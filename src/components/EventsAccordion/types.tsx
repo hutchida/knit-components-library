@@ -5,6 +5,7 @@ export interface IEventsAccordion {
     props: any;
 }
 export interface IEventsAccordionItem {
+    id?: number;
     title?: string;
     body?: string;
     item?: any;

@@ -16,7 +16,11 @@ WithImage.args = {
     title: "Boom",
     description: "lorem ipsum thingum",
     descriptionSize: "lg",
-    bgImage: "https://picsum.photos/1200/1200.webp",
+    bgImage: {
+        fieldtype: 'image',
+        id: '12345',
+        filename: "https://picsum.photos/500/500.webp"
+    },
     bgColor: "#f0f0f0",
     slideWidth: "lg",
     slideHeight: "lg"
@@ -27,7 +31,6 @@ NoImage.args = {
     title: "Boom",
     description: "lorem ipsum thingum",
     descriptionSize: "lg",
-    bgImage: "",
     bgColor: "#f0f0f0",
     slideWidth: "md",
     slideHeight: "md"
