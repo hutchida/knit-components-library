@@ -12,10 +12,11 @@ export interface ISocial {
   icon?: string;
 }
 const Container = tw.div`
-flex
+  flex
 `
 const Social = tw.div`
-
+  px-2
+  h-8
 `
 export const Socials = ({ socials }: ISocials) => {
   return (
@@ -24,7 +25,7 @@ export const Socials = ({ socials }: ISocials) => {
         socials.map((social: ISocial, index: number) =>
           <Social key={index}>
             <Link {...social.link}>
-              {social?.icon ? <img style={{ maxWidth: '16px' }} src={social.icon} alt={social.name} />
+              {social?.icon ? <img style={{ maxHeight: '30px' }} src={social.icon} alt={social.name} />
                 :
                 <div>{social.abbreviation}</div>
               }

@@ -17,7 +17,7 @@ const data = {
     bgColor: '#ffffff',
     onwardLink: {
         url: '#about',
-        displayName: 'About',
+        displayName: 'About Me',
         target: '_self',
     },
     socials: [
@@ -28,7 +28,7 @@ const data = {
             },
             name: 'LinkedIn',
             abbreviation: 'LI',
-            icon: 'https://picsum.photos/16/16.webp',
+            icon: 'https://picsum.photos/30/30.webp',
         },
         {
             link: {
@@ -37,7 +37,7 @@ const data = {
             },
             name: 'GitHub',
             abbreviation: 'GH',
-            icon: 'https://picsum.photos/16/16.webp',
+            icon: 'https://picsum.photos/30/30.webp',
         }
     ],
 }

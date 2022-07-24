@@ -4,6 +4,7 @@ export interface ILink {
   url: string;
   target?: string;
   children?: any;
+  displayName?: string;
 }
 
 export const Link = ({ url, target, children }: ILink) => (
