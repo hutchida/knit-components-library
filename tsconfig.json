@@ -27,6 +27,11 @@
     ],
     "exclude": [
         "node_modules",
-        "lib"
-    ]
+        "lib",
+        "**/*.stories.tsx", 
+        "**/data/**", 
+        "node_modules", 
+        "dist", 
+        "build"
+      ]
   }
