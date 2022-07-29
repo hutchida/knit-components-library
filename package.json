@@ -56,8 +56,8 @@
     "react-dom": "^18.1.0"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook -s ./public",
     "build": "rollup -c",
     "test": "jest",
     "test:watch": "jest --watch"

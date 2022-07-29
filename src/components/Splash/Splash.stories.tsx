@@ -9,7 +9,7 @@ export default {
 
 const data = {
     // profilePic: 'profilepic.jpeg',
-    profilePic: 'https://picsum.photos/400/400.webp',
+    profilePic: './images/profilepic.jpeg',
     subtitle: 'Frontend Developer',
     title: 'Daniel Hutchings',
     oneliner: 'Frontend Developer, DIY Fundamentalist, dreams in JSON...',
@@ -23,12 +23,12 @@ const data = {
     socials: [
         {
             link: {
-                url: 'https://www.linkedin.com',
+                url: 'https://www.linkedin.com/in/danielmhutchings/',
                 target: '_blank',
             },
             name: 'LinkedIn',
             abbreviation: 'LI',
-            icon: 'https://picsum.photos/30/30.webp',
+            icon: 'images/linkedin.svg',
         },
         {
             link: {
@@ -37,7 +37,7 @@ const data = {
             },
             name: 'GitHub',
             abbreviation: 'GH',
-            icon: 'https://picsum.photos/30/30.webp',
+            icon: 'images/github.svg',
         }
     ],
 }

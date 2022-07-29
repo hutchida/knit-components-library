@@ -30,6 +30,7 @@ export const ProfilePic = tw.div<{ $profilePic?: string }>`
   rounded-full
   overflow-hidden
   h-fit
+  max-w-lg
 `
 
 export const Info = tw.div`
