@@ -1,7 +1,6 @@
 import React from "react"
-import tw from "tailwind-styled-components"
 import { ILink, Link } from "../Link"
-
+import { Container, Social } from "./styles"
 interface ISocials {
   socials: ISocial[]
 }
@@ -11,13 +10,7 @@ export interface ISocial {
   abbreviation: string;
   icon?: string;
 }
-const Container = tw.div`
-  flex
-`
-const Social = tw.div`
-  px-2
-  h-8
-`
+
 export const Socials = ({ socials }: ISocials) => {
   return (
     <Container>
