@@ -49,6 +49,7 @@ export const Description = tw.div`
   border-slate-200
   border-2
   bg-white
+  -mt-8
   p-10
   opacity-50
   hidden
