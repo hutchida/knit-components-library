@@ -45,7 +45,6 @@ export const Bar = tw.div`
 export const Description = tw.div`
   absolute
   right-24
-  top-12
   rounded-lg
   border-slate-200
   border-2
