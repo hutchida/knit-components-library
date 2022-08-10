@@ -63,6 +63,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.0",
     "babel": "^6.23.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
