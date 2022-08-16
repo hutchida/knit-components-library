@@ -10,13 +10,26 @@ export default {
 } as Meta;
 
 
-const Template: Story<INavigation> = (args) => <Navigation {...args} />;
+const Template: Story<INavigation> = (args) => {
 
-export const Solo = Template.bind({});
-Solo.args = {
+  return (
+    <div style={{
+      background: `url(https://picsum.photos/2500/2500.webp)`,
+      height: '200vh',
+    }}>
+      <Navigation {...args} />
+    </div>
+
+  )
+};
+
+export const Default = Template.bind({});
+Default.args = {
   title: 'HUTCHIDA', links:
     [
-      { url: 'https://www.bbc.com', displayName: 'BBC' },
-      { url: 'https://www.abc.com', displayName: 'ABC' }
+      { url: 'https://www.bbc.com', displayName: 'About Me' },
+      { url: 'https://www.abc.com', displayName: 'Bio' },
+      { url: 'https://www.bbc.com', displayName: 'Skills' },
+      { url: 'https://www.abc.com', displayName: 'Portfolio' }
     ]
 };

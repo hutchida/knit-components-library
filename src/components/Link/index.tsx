@@ -7,6 +7,6 @@ export interface ILink {
   displayName?: string;
 }
 
-export const Link = ({ url, target, children }: ILink) => (
-  <a href={url} target={target || '_blank'}>{children}</a>
+export const Link = ({ url, target, children, displayName }: ILink) => (
+  <a href={url} target={target || '_blank'}>{children || displayName}</a>
 )
