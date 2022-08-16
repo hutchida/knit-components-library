@@ -6,3 +6,6 @@ export { Slide } from "./components/Slide";
 export { EventsAccordion } from "./components/EventsAccordion";
 export { Socials } from "./components/Socials";
 export { Splash } from "./components/Splash";
+export { HorizontalBar } from "./components/HorizontalBar"
+
+import './styles/global.css';
