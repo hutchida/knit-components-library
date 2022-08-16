@@ -1,30 +1,69 @@
-import React from "react"
+import React, { useRef, useState } from "react"
 import { ILink } from "../Link"
 import { INavigation } from './types'
-import { Container, Title, Logo, Links, LinkContainer } from "./styles"
+import { DesktopContainer, MobileContainer, ToggleMenu, Title, Logo, Links, LinkContainer } from "./styles"
 import { Link } from "../Link"
+import { Hamburger } from "./Hamburger"
+import { Cross } from "./Cross"
 /**
  * Navigation component that takes a title, logo, and an array of links. If the logo is present, it 
- * will show instead of the title. Links will appear on the right hand side on desktop
+ * will show instead of the title. Links will appear on the right hand side on desktop, limited to 
+ * up to 10 links
  */
 export const Navigation = ({ title, logo, links }: INavigation) => {
-
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const navRef = useRef() as React.MutableRefObject<HTMLInputElement>;
+  let prevScrollpos = window.pageYOffset;
+  window.onscroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    const navElement = navRef.current!;
+    if (prevScrollpos > currentScrollPos) {
+      navElement.style.top = "0";
+    } else {
+      navElement.style.top = "-4rem";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+  console.log("showMobileMenu", showMobileMenu)
   return (
-    <Container>
-      <a href='/'>
-        {logo ? <Logo>{logo}</Logo> : <Title>{title}</Title>}
-      </a>
-      <Links>
-        {links && links.length > 0 &&
-          links.map((link: ILink, index: number) => (
-            <LinkContainer>
-              <Link key={index} {...link} />
-            </LinkContainer>
-          )
-          )
+    <>
+      <DesktopContainer ref={navRef}>
+        <a href='/'>
+          {logo ? <Logo>{logo}</Logo> : <Title>{title}</Title>}
+        </a>
+        <Links>
+          {links && links.length > 0 &&
+            links.filter((link: ILink, index: number) => index < 10)
+              .map((link: ILink, index: number) => (
+                <LinkContainer>
+                  <Link key={index} {...link} />
+                </LinkContainer>
+              )
+              )
+          }
+        </Links>
+      </DesktopContainer>
+      <MobileContainer>
+        <ToggleMenu onClick={() => setShowMobileMenu(showMobileMenu ? false : true)}>
+          {!showMobileMenu ?
+            <Cross /> :
+            <Hamburger />}
+        </ToggleMenu>
+        {showMobileMenu &&
+          <Links>
+            {links && links.length > 0 &&
+              links.filter((link: ILink, index: number) => index < 10)
+                .map((link: ILink, index: number) => (
+                  <LinkContainer>
+                    <Link key={index} {...link} />
+                  </LinkContainer>
+                )
+                )
+            }
+          </Links>
         }
-      </Links>
-    </Container>
+      </MobileContainer>
+    </>
   )
 }
 
