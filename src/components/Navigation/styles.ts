@@ -14,6 +14,9 @@ duration-700
 export const MobileContainer = tw.div`
 flex
 md:hidden
+`
+
+export const MobileNavPanel = tw.div`
 justify-between
 p-4
 backdrop-blur
@@ -50,6 +53,7 @@ w-full
 scale-125
 md:scale-100
 md:px-2
+md:py-0
 md:w-fit
 `
 
@@ -63,6 +67,8 @@ top-0
 
 export const ToggleMenu = tw.div`
 w-fit
-absolute
+fixed
 right-2
+z-10
+top-4
 `

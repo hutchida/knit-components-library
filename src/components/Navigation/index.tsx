@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 import { ILink } from "../Link"
 import { INavigation } from './types'
-import { DesktopContainer, MobileContainer, ToggleMenu, Title, Logo, Links, LinkContainer } from "./styles"
+import { DesktopContainer, MobileContainer, ToggleMenu, MobileNavPanel, Title, Logo, Links, LinkContainer } from "./styles"
 import { Link } from "../Link"
 import { Hamburger } from "./Hamburger"
 import { Cross } from "./Cross"
@@ -61,17 +61,19 @@ export const Navigation = ({ title, logo, links }: INavigation) => {
             <Hamburger />}
         </ToggleMenu>
         {showMobileMenu &&
-          <Links>
-            {links && links.length > 0 &&
-              links.filter((link: ILink, index: number) => index < 10)
-                .map((link: ILink, index: number) => (
-                  <LinkContainer>
-                    <Link key={index} {...link} />
-                  </LinkContainer>
-                )
-                )
-            }
-          </Links>
+          <MobileNavPanel>
+            <Links>
+              {links && links.length > 0 &&
+                links.filter((link: ILink, index: number) => index < 10)
+                  .map((link: ILink, index: number) => (
+                    <LinkContainer>
+                      <Link key={index} {...link} />
+                    </LinkContainer>
+                  )
+                  )
+              }
+            </Links>
+          </MobileNavPanel>
         }
       </MobileContainer>
     </>
