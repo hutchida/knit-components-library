@@ -8,7 +8,8 @@ import { Cross } from "./Cross"
 /**
  * Navigation component that takes a title, logo, and an array of links. If the logo is present, it 
  * will show instead of the title. Links will appear on the right hand side on desktop, limited to 
- * up to 10 links
+ * up to 10 links. Mobile will show a hamburger in the top right, when clicked will overlay a panel
+ * of links and display a cross where the hamburger was
  */
 export const Navigation = ({ title, logo, links }: INavigation) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
