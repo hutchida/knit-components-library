@@ -24,7 +24,18 @@ export const Navigation = ({ title, logo, links }: INavigation) => {
     }
     prevScrollpos = currentScrollPos;
   }
-  console.log("showMobileMenu", showMobileMenu)
+
+  const onClickHandler = () => {
+    if (showMobileMenu === true) {
+      setShowMobileMenu(false);
+      document.body.style.overflowY = "scroll";
+      document.body.style.height = "auto";
+    } else {
+      setShowMobileMenu(true);
+      document.body.style.overflowY = "hidden";
+      document.body.style.height = "100vh";
+    }
+  }
   return (
     <>
       <DesktopContainer ref={navRef}>
@@ -44,8 +55,8 @@ export const Navigation = ({ title, logo, links }: INavigation) => {
         </Links>
       </DesktopContainer>
       <MobileContainer>
-        <ToggleMenu onClick={() => setShowMobileMenu(showMobileMenu ? false : true)}>
-          {!showMobileMenu ?
+        <ToggleMenu onClick={() => onClickHandler()}>
+          {showMobileMenu ?
             <Cross /> :
             <Hamburger />}
         </ToggleMenu>
