@@ -1,7 +1,17 @@
 import React, { useRef, useState } from "react"
 import { ILink } from "../Link"
 import { INavigation } from './types'
-import { DesktopContainer, MobileContainer, ToggleMenu, MobileNavPanel, Title, Logo, Links, LinkContainer } from "./styles"
+import {
+  NavigationContainer,
+  DesktopContainer,
+  MobileContainer,
+  ToggleMenu,
+  MobileNavPanel,
+  Title,
+  Logo,
+  Links,
+  LinkContainer
+} from "./styles"
 import { Link } from "../Link"
 import { Hamburger } from "./Hamburger"
 import { Cross } from "./Cross"
@@ -14,16 +24,18 @@ import { Cross } from "./Cross"
 export const Navigation = ({ title, logo, links }: INavigation) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const navRef = useRef() as React.MutableRefObject<HTMLInputElement>;
-  let prevScrollpos = window.pageYOffset;
-  window.onscroll = () => {
-    const currentScrollPos = window.pageYOffset;
-    const navElement = navRef.current!;
-    if (prevScrollpos > currentScrollPos) {
-      navElement.style.top = "0";
-    } else {
-      navElement.style.top = "-4rem";
+  if (typeof window !== 'undefined') {
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const navElement = navRef.current!;
+      if (prevScrollpos > currentScrollPos) {
+        navElement.style.top = "0";
+      } else {
+        navElement.style.top = "-4rem";
+      }
+      prevScrollpos = currentScrollPos;
     }
-    prevScrollpos = currentScrollPos;
   }
 
   const onClickHandler = () => {
@@ -38,7 +50,7 @@ export const Navigation = ({ title, logo, links }: INavigation) => {
     }
   }
   return (
-    <>
+    <NavigationContainer>
       <DesktopContainer ref={navRef}>
         <a href='/'>
           {logo ? <Logo>{logo}</Logo> : <Title>{title}</Title>}
@@ -77,7 +89,7 @@ export const Navigation = ({ title, logo, links }: INavigation) => {
           </MobileNavPanel>
         }
       </MobileContainer>
-    </>
+    </NavigationContainer>
   )
 }
 
