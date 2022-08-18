@@ -18,7 +18,8 @@ export interface ITwitterUser {
 
 export interface ITweet {
   tweet: string;
-  published: Date;
+  published: string;
   numOfRetweets: number;
   sentiment: 0 | 1 | 2;
+  url: string;
 }

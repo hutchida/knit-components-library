@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "../Link"
 import {
   TileContainer,
   UserPanel,
@@ -9,7 +10,8 @@ import {
   UserStats,
   TweetPanel,
   Tweet,
-  TweetInfo
+  TweetInfo,
+  LinkContainer,
 } from './styles'
 import { ITweetTile } from "./types"
 const sizeMap = {
@@ -40,12 +42,13 @@ export const TweetTile = ({ config, user, tweet }: ITweetTile) => {
         </ProfilePic>
         <UserInfo>
           <UserHandle>@{user.handle}</UserHandle>
-          <UserBio>{user.bio}</UserBio>
           <UserStats>Followers: {user.numOfFollowers}</UserStats>
+          <UserBio>{user.bio}</UserBio>
         </UserInfo>
       </UserPanel>
       <TweetPanel>
         <Tweet>"{tweet.tweet}"</Tweet>
+        <LinkContainer><Link url={tweet.url}>See original tweet</Link></LinkContainer>
         <TweetInfo>Retweeted: {tweet.numOfRetweets} | Published: {tweet.published}</TweetInfo>
       </TweetPanel>
     </TileContainer >
