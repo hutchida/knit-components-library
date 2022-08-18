@@ -22,9 +22,13 @@ Default.args = {
   config: { size: 'lg' },
   user: {
     handle: 'hutchida',
-    profilePic: 'https://pbs.twimg.com/profile_images/1405814141315584002/MIdRJFHL_400x400.jpg'
+    profilePic: 'https://pbs.twimg.com/profile_images/1405814141315584002/MIdRJFHL_400x400.jpg',
+    numOfFollowers: 150000,
   },
   tweet: {
-    tweet: "Couple of speakers trying convince us how easy it is deploy shit to Azure, and let's face it already...it's not, and it looks like it never will be."
+    tweet: "Couple of speakers trying convince us how easy it is deploy shit to Azure, and let's face it already...it's not, and it looks like it never will be.",
+    numOfRetweets: 50000,
+    published: '',
+    sentiment: 2,
   }
 };
