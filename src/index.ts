@@ -7,5 +7,8 @@ export { EventsAccordion } from "./components/EventsAccordion";
 export { Socials } from "./components/Socials";
 export { Splash } from "./components/Splash";
 export { HorizontalBar } from "./components/HorizontalBar"
+export { Navigation } from "./components/Navigation"
+export { Cross } from "./components/Navigation/Cross"
+export { Hamburger } from "./components/Navigation/Hamburger"
 
 import './styles/global.css';

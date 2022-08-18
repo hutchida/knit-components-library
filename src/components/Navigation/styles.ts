@@ -1,6 +1,11 @@
 import tw from 'tailwind-styled-components';
 
+export const NavigationContainer = tw.div`
+z-50
+`
+
 export const DesktopContainer = tw.div`
+left-0
 hidden
 md:flex
 justify-between
@@ -11,12 +16,14 @@ w-full
 transition-all
 duration-700
 `
+
 export const MobileContainer = tw.div`
 flex
 md:hidden
 `
 
 export const MobileNavPanel = tw.div`
+left-0
 justify-between
 p-4
 backdrop-blur
