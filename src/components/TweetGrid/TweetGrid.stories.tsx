@@ -19,5 +19,12 @@ const Template: Story<any> = (args) => {
 
 export const Default = Template.bind({});
 Default.args = {
-  props: { size: 'md' }, data: tileData
+  config: {
+    size: 'sm',
+    colorMap: {
+      0: { 'heavy': 'red', 'light': 'pink' },
+      1: { 'heavy': 'orange', 'light': 'peachpuff' },
+      2: { 'heavy': 'palegreen', 'light': 'honeydew' },
+    }
+  }, data: tileData
 };

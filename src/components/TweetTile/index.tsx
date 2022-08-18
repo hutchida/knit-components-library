@@ -14,18 +14,8 @@ import {
   LinkContainer,
 } from './styles'
 import { ITweetTile } from "./types"
-const sizeMap = {
-  'xs': '10rem',
-  'sm': '15rem',
-  'md': '30rem',
-  'lg': '40rem',
-  'xl': '60rem',
-}
-const colorMap = {
-  0: { 'heavy': 'red', 'light': 'pink' },
-  1: { 'heavy': 'orange', 'light': 'peachpuff' },
-  2: { 'heavy': 'palegreen', 'light': 'honeydew' },
-}
+
+
 /**
  * TweetTile component that takes config data, user data, and tweet data. The user data is displayed in 
  * top half of the tile, the tweet data in the lower half. The config data can be used to modify styling
@@ -33,8 +23,7 @@ const colorMap = {
  * based on the sentiment value in the tweet data.
  */
 export const TweetTile = ({ config, user, tweet }: ITweetTile) => {
-  const size = sizeMap[config.size] || '50rem'
-  const color = colorMap[tweet.sentiment] || { 'heavy': 'purple', 'light': 'plum' }
+  const color = config.colorMap[tweet.sentiment] || { 'heavy': 'purple', 'light': 'plum' }
   return (
     <TileContainer style={{
       // width: size,
@@ -48,14 +37,16 @@ export const TweetTile = ({ config, user, tweet }: ITweetTile) => {
         </ProfilePic>
         <UserInfo>
           <UserHandle>@{user.handle}</UserHandle>
-          <UserStats>Followers: {user.numOfFollowers}</UserStats>
-          <UserBio>{user.bio}</UserBio>
+          <UserBio>Bio: {user.bio}
+            <UserStats>Followers: {user.numOfFollowers}</UserStats></UserBio>
         </UserInfo>
       </UserPanel>
       <TweetPanel>
         <Tweet>"{tweet.tweet}"</Tweet>
-        <LinkContainer><Link url={tweet.url}>See original tweet</Link></LinkContainer>
-        <TweetInfo>Retweeted: {tweet.numOfRetweets} | Published: {tweet.published}</TweetInfo>
+        <TweetInfo>Retweeted: {tweet.numOfRetweets}
+          <br />Published: {tweet.published}
+          <LinkContainer><Link url={tweet.url}>See original tweet</Link></LinkContainer>
+        </TweetInfo>
       </TweetPanel>
     </TileContainer >
   )

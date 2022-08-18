@@ -13,3 +13,4 @@ export { Hamburger } from "./components/Navigation/Hamburger"
 export { TweetTile } from "./components/TweetTile"
 
 import './styles/global.css';
+import './styles/sizes.css';

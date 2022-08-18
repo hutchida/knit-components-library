@@ -6,7 +6,9 @@ export interface ITweetTile {
 
 export interface IConfig {
   size: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  colorMap: any;
 }
+
 
 export interface ITwitterUser {
   profilePic: string;

@@ -19,7 +19,14 @@ const Template: Story<ITweetTile> = (args) => {
 const currentDate = new Date()
 export const Default = Template.bind({});
 Default.args = {
-  config: { size: 'md' },
+  config: {
+    size: 'md',
+    colorMap: {
+      0: { 'heavy': 'red', 'light': 'pink' },
+      1: { 'heavy': 'orange', 'light': 'peachpuff' },
+      2: { 'heavy': 'palegreen', 'light': 'honeydew' },
+    }
+  },
   user: {
     handle: 'hutchida',
     bio: 'Front end dev in Berlin...dreams in JSON now',

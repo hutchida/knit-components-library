@@ -1,10 +1,9 @@
 import tw from "tailwind-styled-components"
-import styled from "styled-components"
 
-export const TileContainer = styled.div`
-  border-width: 8px;
-  width: 100%;
-  height:100%;
+export const TileContainer = tw.div`
+border-8
+w-full
+h-full
 `
 
 export const UserPanel = tw.div`
@@ -19,17 +18,17 @@ rounded-full
 overflow-hidden
 w-1/3
 h-full
-
 `
 
 export const UserInfo = tw.div`
-p-5
+px-5
 flex
 flex-col
 justify-around
 `
 
 export const UserHandle = tw.h1`
+text-100pc
 `
 
 export const UserBio = tw.h3`
@@ -38,30 +37,41 @@ rounded-lg
 border-slate-200
 border-2
 bg-white
-opacity-80
-p-10
+opacity-90
 hidden
 group-hover:block
 max-w-lg
-font-bold
 mt-44
+text-75pc
+p-1pc
 `
 
 export const UserStats = tw.p`
-p-5
 `
 
 export const TweetPanel = tw.div`
+group
 px-5
 `
 
-export const Tweet = tw.h2`
+export const Tweet = tw.h3`
+text-75pc
 `
 
 export const TweetInfo = tw.p`
-p-5
+absolute
+rounded-lg
+border-slate-200
+border-2
+bg-white
+opacity-90
+hidden
+group-hover:block
+max-w-lg
+mt-0
+text-75pc
+p-1pc
 `
 
 export const LinkContainer = tw.div`
-px-5
 `
