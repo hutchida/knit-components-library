@@ -6,7 +6,6 @@ import { Container, ControlBar, ControlBarContainer, GridContainer, TileContaine
 
 export const TweetGrid = ({ config, data }: any) => {
   const [tileSize, setTileSize] = useState('md');
-
   return (
     <Container>
       <ControlBarContainer>
@@ -18,7 +17,7 @@ export const TweetGrid = ({ config, data }: any) => {
           </select>
         </ControlBar>
       </ControlBarContainer>
-      <GridContainer style={{ top: '2rem' }}>
+      <GridContainer>
         {data.map((tile: ITweetTile, index: number) =>
           <TileContainer className={tileSize}>
             <TweetTile key={index} {...tile} config={config} />

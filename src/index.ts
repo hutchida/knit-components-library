@@ -11,6 +11,7 @@ export { Navigation } from "./components/Navigation"
 export { Cross } from "./components/Navigation/Cross"
 export { Hamburger } from "./components/Navigation/Hamburger"
 export { TweetTile } from "./components/TweetTile"
+export { TweetGrid } from "./components/TweetGrid"
 
 import './styles/global.css';
 import './styles/sizes.css';
