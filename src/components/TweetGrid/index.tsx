@@ -1,23 +1,29 @@
 /* eslint-disable no-console */
-import React from "react"
+import React, { useState } from "react"
 import { TweetTile } from "../TweetTile"
 import { ITweetTile } from "../TweetTile/types"
-import tw from "tailwind-styled-components"
-
-export const Container = tw.div`
-  flex
-  flex-wrap
-`
-export const TileContainer = tw.div`
-`
+import { Container, ControlBar, ControlBarContainer, GridContainer, TileContainer } from "./styles"
 
 export const TweetGrid = ({ config, data }: any) => {
+  const [tileSize, setTileSize] = useState('md');
+
   return (
     <Container>
-      {data.map((tile: ITweetTile, index: number) =>
-        <TileContainer className={config.size || 'md'}>
-          <TweetTile key={index} {...tile} config={config} />
-        </TileContainer>)}
+      <ControlBarContainer>
+        <ControlBar>Size of tiles currently set to:
+          <select onChange={(e) => setTileSize(e.target.value)}>
+            <option value="sm">sm</option>
+            <option value="md" selected>md</option>
+            <option value="lg">lg</option>
+          </select>
+        </ControlBar>
+      </ControlBarContainer>
+      <GridContainer style={{ top: '2rem' }}>
+        {data.map((tile: ITweetTile, index: number) =>
+          <TileContainer className={tileSize}>
+            <TweetTile key={index} {...tile} config={config} />
+          </TileContainer>)}
+      </GridContainer>
     </Container>
   )
 }
