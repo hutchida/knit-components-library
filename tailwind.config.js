@@ -2,7 +2,18 @@
 module.exports = {
   content: ['./src/components/**/*.{ts, tsx}'],
   theme: {
+    fontSize: {
+      '25pc': '25%',
+      '50pc': '50%',
+      '75pc': '75%',
+      '80pc': '80%',
+      '90pc': '90%',
+      '100pc': '100%',
+    },
     extend: {
+      padding: {
+        '1pc': '1%',
+      },
       rotate: {}
       ,
       inset: {
