@@ -26,8 +26,6 @@ export const TweetTile = ({ config, user, tweet }: ITweetTile) => {
   const color = config.colorMap[tweet.sentiment] || { 'heavy': 'purple', 'light': 'plum' }
   return (
     <TileContainer style={{
-      // width: size,
-      // height: size,
       backgroundColor: color.light,
       borderColor: color.heavy
     }}>
