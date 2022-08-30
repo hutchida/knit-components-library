@@ -12,6 +12,7 @@ export { Cross } from "./components/Navigation/Cross"
 export { Hamburger } from "./components/Navigation/Hamburger"
 export { TweetTile } from "./components/TweetTile"
 export { TweetGrid } from "./components/TweetGrid"
+export { Tumbleweed } from "./icons/desert"
 
 import './styles/global.css';
 import './styles/sizes.css';
