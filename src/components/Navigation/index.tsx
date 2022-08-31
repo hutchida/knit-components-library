@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { ILink } from "../Link"
 import { INavigation } from './types'
 import {
+  HomeLink,
   NavigationContainer,
   DesktopContainer,
   MobileContainer,
@@ -32,7 +33,7 @@ export const Navigation = ({ title, logo, links }: INavigation) => {
       if (prevScrollpos > currentScrollPos) {
         navElement.style.top = "0";
       } else {
-        navElement.style.top = "-4rem";
+        navElement.style.top = "-7rem";
       }
       prevScrollpos = currentScrollPos;
     }
@@ -52,9 +53,9 @@ export const Navigation = ({ title, logo, links }: INavigation) => {
   return (
     <NavigationContainer>
       <DesktopContainer ref={navRef}>
-        <a href='/'>
+        <HomeLink href='/'>
           {logo ? <Logo>{logo}</Logo> : <Title>{title}</Title>}
-        </a>
+        </HomeLink>
         <Links>
           {links && links.length > 0 &&
             links.filter((link: ILink, index: number) => index < 10)
