@@ -12,6 +12,7 @@ export const Container = tw.div`
   `
 
 export const Left = tw.div`
+  px-5
   w-1/2
   flex
   justify-center
@@ -19,6 +20,7 @@ export const Left = tw.div`
 `
 
 export const Right = tw.div`
+  px-5
   w-1/2
   flex
   justify-center

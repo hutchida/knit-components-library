@@ -1,16 +1,19 @@
 // tailwind.config.js
 module.exports = {
-  content: ['./src/components/**/*.{ts, tsx}'],
+  content: ['./src/components/**/*.ts','./src/components/**/*.tsx','./src/*.ts'],
   theme: {
-    fontSize: {
-      '25pc': '25%',
-      '50pc': '50%',
-      '75pc': '75%',
-      '80pc': '80%',
-      '90pc': '90%',
-      '100pc': '100%',
-    },
     extend: {
+      colors: {
+        'hygraph': '#6663fd',
+      },
+      fontSize: {
+        '25pc': '25%',
+        '50pc': '50%',
+        '75pc': '75%',
+        '80pc': '80%',
+        '90pc': '90%',
+        '100pc': '100%',
+      },
       padding: {
         '1pc': '1%',
       },
@@ -42,7 +45,5 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     }
   },
-  plugins: [
-    require('@tailwindcss/line-clamp'),],
   mode: 'jit',
 }

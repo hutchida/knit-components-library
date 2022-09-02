@@ -9,7 +9,8 @@ left-0
 hidden
 md:flex
 justify-between
-p-4
+py-4
+px-10
 backdrop-blur
 fixed
 w-full
@@ -33,9 +34,18 @@ h-screen
 transition-all
 duration-700
 `
-
+export const HomeLink = tw.a`
+text-5xl
+text-hygraph
+hover:text-emerald-400
+hover:transition-all
+hover:duration-700
+self-center
+-mt-3
+`
 export const Title = tw.div`
 self-center
+font-light
 `
 
 export const Logo = tw.div`
@@ -52,6 +62,7 @@ md:w-fit
 md:flex
 md:flex-row
 md:justify-end
+items-end
 `
 
 export const LinkContainer = tw.div`
@@ -60,8 +71,14 @@ w-full
 scale-125
 md:scale-100
 md:px-2
-md:py-0
 md:w-fit
+md:text-2xl
+text-hygraph
+hover:text-emerald-300
+hover:bg-black
+hover:px-6
+hover:transition-all
+hover:duration-700
 `
 
 export const Line = tw.div`
