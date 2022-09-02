@@ -13,6 +13,7 @@ export { Hamburger } from "./components/Navigation/Hamburger"
 export { TweetTile } from "./components/TweetTile"
 export { TweetGrid } from "./components/TweetGrid"
 export { Tumbleweed } from "./icons/desert"
+export { ByJavascript, ByCSS } from "./components/Display/ConditionalRender"
 
 import './styles/global.css';
 import './styles/sizes.css';
