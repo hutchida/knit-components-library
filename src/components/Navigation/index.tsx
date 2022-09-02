@@ -51,46 +51,50 @@ export const Navigation = ({ title, logo, links }: INavigation) => {
     }
   }
   return (
-    <NavigationContainer>
-      <DesktopContainer ref={navRef}>
-        <HomeLink href='/'>
-          {logo ? <Logo>{logo}</Logo> : <Title>{title}</Title>}
-        </HomeLink>
-        <Links>
-          {links && links.length > 0 &&
-            links.filter((link: ILink, index: number) => index < 10)
-              .map((link: ILink, index: number) => (
-                <LinkContainer>
-                  <Link key={index} {...link} />
-                </LinkContainer>
-              )
-              )
+    <>
+      <NavigationContainer>
+        <DesktopContainer ref={navRef}>
+          <HomeLink href='/'>
+            {logo ? <Logo>{logo}</Logo> : <Title>{title}</Title>}
+          </HomeLink>
+          <Links>
+            {links && links.length > 0 &&
+              links.filter((link: ILink, index: number) => index < 10)
+                .map((link: ILink, index: number) => (
+                  <LinkContainer>
+                    <Link key={index} {...link} />
+                  </LinkContainer>
+                )
+                )
+            }
+          </Links>
+        </DesktopContainer>
+        <MobileContainer>
+          <ToggleMenu onClick={() => onClickHandler()}>
+            {showMobileMenu ?
+              <Cross /> :
+              <Hamburger />}
+          </ToggleMenu>
+          {showMobileMenu &&
+            <MobileNavPanel>
+              <Links>
+                {links && links.length > 0 &&
+                  links.filter((link: ILink, index: number) => index < 10)
+                    .map((link: ILink, index: number) => (
+                      <LinkContainer>
+                        <Link key={index} {...link} />
+                      </LinkContainer>
+                    )
+                    )
+                }
+              </Links>
+            </MobileNavPanel>
           }
-        </Links>
-      </DesktopContainer>
-      <MobileContainer>
-        <ToggleMenu onClick={() => onClickHandler()}>
-          {showMobileMenu ?
-            <Cross /> :
-            <Hamburger />}
-        </ToggleMenu>
-        {showMobileMenu &&
-          <MobileNavPanel>
-            <Links>
-              {links && links.length > 0 &&
-                links.filter((link: ILink, index: number) => index < 10)
-                  .map((link: ILink, index: number) => (
-                    <LinkContainer>
-                      <Link key={index} {...link} />
-                    </LinkContainer>
-                  )
-                  )
-              }
-            </Links>
-          </MobileNavPanel>
-        }
-      </MobileContainer>
-    </NavigationContainer>
+        </MobileContainer>
+      </NavigationContainer>
+      {/* Spacer to push all following components down */}
+      <div style={{ height: "7rem" }} />
+    </>
   )
 }
 
