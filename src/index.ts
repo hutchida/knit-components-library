@@ -14,6 +14,7 @@ export { TweetTile } from "./components/TweetTile"
 export { TweetGrid } from "./components/TweetGrid"
 export { Tumbleweed } from "./icons/desert"
 export { ByJavascript, ByCSS } from "./components/Display/ConditionalRender"
+export { BlogPost } from "./components/BlogPost"
 
 import './styles/global.css';
 import './styles/sizes.css';
