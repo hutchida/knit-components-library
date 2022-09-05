@@ -14,7 +14,7 @@ const Template: Story<INavigation> = (args) => {
 
   return (
     <div style={{
-      background: `url(https://picsum.photos/2500/2500.webp)`,
+      // background: `url(https://picsum.photos/2500/2500.webp)`,
       height: '200vh',
     }}>
       <Navigation {...args} />

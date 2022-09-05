@@ -36,10 +36,12 @@ duration-700
 `
 export const HomeLink = tw.a`
 text-5xl
-text-hygraph
-hover:text-emerald-400
+text-slate-800
+transition-all
+hover:text-slate-600
 hover:transition-all
-hover:duration-700
+hover:duration-400
+hover:scale-110
 self-center
 -mt-3
 `
@@ -73,12 +75,13 @@ md:scale-100
 md:px-2
 md:w-fit
 md:text-2xl
-text-hygraph
-hover:text-emerald-300
-hover:bg-black
-hover:px-6
+text-slate-500
+transition-all
+hover:text-slate-900
+hover:scale-105
+hover:transform
 hover:transition-all
-hover:duration-700
+hover:duration-400
 `
 
 export const Line = tw.div`
