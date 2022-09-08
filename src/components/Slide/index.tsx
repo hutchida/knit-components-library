@@ -1,35 +1,32 @@
 import React from 'react';
 import {
-    Container, SlideItem, Title, Description
+    Container, SlideItem, Title
 } from './styles';
 import { ISlide } from './types';
-import { spacingMap, slideSizeMap, descriptionSizeMap } from './maps';
+import { spacingMap, slideSizeMapViewPort } from './maps';
+import { RichText } from '../RichText';
 export const Slide = ({
     title,
-    description,
-    descriptionSize = "md",
+    html,
     bgImage,
     bgColor,
-    slideWidth = "md",
-    slideHeight = "md",
-    spacing = "xl"
+    size = "xl",
+    spacing = "md",
+    borderColor
 }: ISlide) => {
     return (
         <Container $spacing={spacingMap[spacing]}>
             <SlideItem
                 $imageUrl={bgImage?.filename}
                 $color={bgColor}
-                $slideWidth={slideSizeMap[slideWidth]}
-                $slideHeight={slideSizeMap[slideHeight]}>
+                $size={slideSizeMapViewPort[size]}
+                $borderColor={borderColor}
+            >
                 {title &&
                     <Title
                         $color={bgColor}
                     >{title}</Title>}
-                {description &&
-                    <Description
-                        $descriptionSize={descriptionSizeMap[descriptionSize]}
-                        $color={bgColor}
-                    >{description}</Description>}
+                {html && <RichText text={html} />}
             </SlideItem>
         </Container>
     )
