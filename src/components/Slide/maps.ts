@@ -12,6 +12,13 @@ export const slideSizeMap = {
   "lg": 800,
   "xl": 1200
 }
+export const slideSizeMapViewPort = {
+  "xs": 10,
+  "sm": 20,
+  "md": 40,
+  "lg": 60,
+  "xl": 70
+}
 export const spacingMap = {
   "xs": 6,
   "sm": 8,

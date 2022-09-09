@@ -16,16 +16,16 @@ export default {
 const PageOfSlidesTemplate: Story<ISlide> = (args) => {
     return (
         <>
-            <Animate slideUp>
+            <Animate enterFrom={'top'} addSpace>
                 <Slide {...args} />
             </Animate>
-            <Animate slideUp>
+            <Animate enterFrom={'right'} addSpace>
                 <Slide {...args} />
             </Animate>
-            <Animate slideUp>
+            <Animate enterFrom={'bottom'} addSpace>
                 <Slide {...args} />
             </Animate>
-            <Animate slideUp>
+            <Animate enterFrom={'left'} addSpace>
                 <Slide {...args} />
             </Animate>
         </>
@@ -40,7 +40,7 @@ PageOfSlides.args = {
     bgColor: "#f0f0f0",
     descriptionSize: "lg",
     slideWidth: "lg",
-    slideHeight: "lg"
+    slideHeight: "lg",
 };
 
 

@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import React from "react";
 /**
  * 
- * @param slideUp - boolean to tell component to invoke the slideUp class
+ * @param enterFrom - enum to tell component to invoke the relevant slideIn class
  * @param spinFromLeft - boolean to tell component to invoke the spinFromLeft class
  * @param spinFromRight - boolean to tell component to invoke the spinFromLeft class
  * @param children - other react elements that this component wraps
@@ -13,7 +13,7 @@ import React from "react";
  */
 export const Animate = (
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  { slideUp, spinFromRight, spinFromLeft, time = '700ms', children }:
+  { slideUp, enterFrom, addSpace, spinFromRight, spinFromLeft, time = '700ms', children }:
     IAnimate) => {
   const [isVisible, setVisible] = useState(false);
   const domRef = useRef() as React.MutableRefObject<HTMLInputElement>;
@@ -30,13 +30,13 @@ export const Animate = (
     }
     return;
   }, [isVisible]);
-
   return (
-    <Wrapper>
+    <Wrapper $addSpace={addSpace}>
       <Container
         $isVisible={isVisible}
         $spinFromLeft={spinFromLeft}
         $spinFromRight={spinFromRight}
+        $enterFrom={enterFrom}
         ref={domRef}
       >
         {children}
