@@ -15,6 +15,7 @@ export { TweetGrid } from "./components/TweetGrid"
 export { Tumbleweed } from "./icons/desert"
 export { ByJavascript, ByCSS } from "./components/Display/ConditionalRender"
 export { BlogPost } from "./components/BlogPost"
+export { RichText } from "./components/RichText"
 
 import './styles/global.css';
 import './styles/sizes.css';
