@@ -42,15 +42,3 @@ export const Title = styled.h1<{
   ${(p) =>`background-color: ${p.$color || 'white'};`}
 
 `
-
-export const Description = styled.p<{ 
-  $descriptionSize?: number,  
-  $color?: string, 
-  }>`
-  ${(p) =>`font-size: ${p.$descriptionSize || 1.5}rem;`}
-  ${(p) =>`background-color: ${p.$color || 'white'};`}
-  width: fit-content;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-`
