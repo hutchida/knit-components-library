@@ -16,7 +16,7 @@ export const Box = styled.div<{
   $borderColor: string,
   $opacity: number
 }>`
-  ${(p) => `opacity: ${p.$opacity || 100};`}
+  ${(p) => `opacity: ${p.$opacity || 100}%;`}
   ${(p) => `border: 3px solid ${p.$borderColor};`}
   ${(p)=> `color: ${p.$textColor};`}
   width: fit-content;
