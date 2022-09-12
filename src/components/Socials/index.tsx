@@ -8,7 +8,7 @@ export interface ISocial {
   link: ILink
   name: string;
   abbreviation: string;
-  icon?: string;
+  icon?: any;
 }
 
 export const Socials = ({ socials }: ISocials) => {
@@ -18,7 +18,7 @@ export const Socials = ({ socials }: ISocials) => {
         socials.map((social: ISocial, index: number) =>
           <Social key={index}>
             <Link {...social.link}>
-              {social?.icon ? <img style={{ maxHeight: '30px' }} src={social.icon} alt={social.name} />
+              {social?.icon ? <img style={{ maxHeight: '30px' }} src={social.icon?.responsiveImage?.src} alt={social.name} />
                 :
                 <div>{social.abbreviation}</div>
               }
