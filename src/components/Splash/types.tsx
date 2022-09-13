@@ -7,7 +7,8 @@ export interface ISplash {
     title?: string;
     oneliner?: string;
     socials?: ISocial[];
-    bgImage?: string;
+    backgroundImage?: any;
     bgColor?: string;
     onwardLink?: ILink;
+    heroImage?: any;
 }

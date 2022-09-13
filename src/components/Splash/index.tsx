@@ -1,4 +1,6 @@
 import React from 'react';
+import { Image } from "react-datocms";
+
 import {
     Wrapper,
     Container,
@@ -26,12 +28,12 @@ const downChevron =
  * Splash intro hero section component 
  */
 export const Splash = ({
-    profilePic,
+    heroImage,
     subtitle,
     title,
     oneliner,
     socials,
-    bgImage,
+    backgroundImage,
     bgColor = 'white',
     onwardLink,
 }: ISplash) => {
@@ -39,13 +41,16 @@ export const Splash = ({
         <Wrapper>
             <Container
                 style={{
-                    backgroundImage: `url(${bgImage})`,
+                    backgroundImage: `url(${backgroundImage?.responsiveImage?.src})`,
                     backgroundColor: `${bgColor || 'white'}`
                 }}
             >
                 <Left>
                     <ProfilePic>
-                        <img src={profilePic} />
+                        {heroImage?.responsiveImage ?
+                            <Image data={heroImage?.responsiveImage} /> :
+                            <img src={heroImage?.url} />
+                        }
                     </ProfilePic>
                 </Left>
                 <Right>

@@ -1,6 +1,6 @@
 {
   "name": "knit-hutchida",
-  "version": "1.0.46",
+  "version": "1.0.55",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
@@ -41,6 +41,7 @@
     "postcss": "^8.4.8",
     "prettier": "^2.6.1",
     "react": "^18.1.0",
+    "react-datocms": "^3.0.12",
     "react-dom": "^18.1.0",
     "react-test-renderer": "^18.1.0",
     "rollup": "^2.62.0",
