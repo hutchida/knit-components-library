@@ -1,6 +1,6 @@
 {
   "name": "knit-hutchida",
-  "version": "1.0.53",
+  "version": "1.0.54",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
