@@ -17,6 +17,7 @@ export { ByJavascript, ByCSS } from "./components/Display/ConditionalRender"
 export { BlogPost } from "./components/BlogPost"
 export { RichText } from "./components/RichText"
 export { SketchBox } from "./components/SketchBox"
+export { Spacer } from "./components/Spacer"
 
 import './styles/global.css';
 import './styles/sizes.css';
